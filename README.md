@@ -1,10 +1,10 @@
 # Analisis en frecuencia y diagramas de Bode
 El análisis en frecuencia es un método para evaluar el comportamiento de sistemas dinámicos mediante la observación de la salida ante cambios en la frecuencia de entrada. Se utilizan señales sinusoidales de la forma $$\( R = A \sin(\omega_k T + \theta) \)$$, asumiendo que el sistema es lineal. Al variar la frecuencia de entrada, se generan cambios en la amplitud y la fase de la señal de salida, lo que permite entender mejor la respuesta del sistema.  
 
-## La representación matemática
+## 1.La representación matemática
 de señales sinusoidales es útil porque permite su tratamiento mediante fasores. Los fasores, que representan la señal en términos de amplitud y fase, asumen una frecuencia constante. Al representar tanto la entrada como la salida del sistema como fasores, se facilita el análisis y la representación del comportamiento del sistema en su conjunto, simplificando los cálculos y la comprensión de las interacciones entre las señales.
 
-## funcion de transferencia en terminos de la frecuencia
+## 2.Funcion de transferencia en terminos de la frecuencia
 Para expresar la función de transferencia en términos de la frecuencia, se utiliza la relación entre la variable de Laplace $$\( s \)$$ y la frecuencia $$\( \omega \)$$, donde $$\( s = j\omega \)$$. Además, la equivalencia de mapeo de polos y ceros se puede representar como $$\( z = e^{sT} \)$$. Sustituyendo $$\( s \)$$ por $$\( j\omega \)$$, obtenemos que:
 
 $$\[
@@ -62,7 +62,7 @@ Esto ofrece una forma clara para analizar la respuesta en frecuencia del sistema
 
 
    
-## Diagramas de frecuencia
+## 3.Diagramas de frecuencia
 
 Para cualquier función de transferencia, es posible separar la parte real e imaginaria, lo que permite calcular la magnitud y la fase en el dominio de la frecuencia. Esto es fundamental para analizar el comportamiento del sistema, ya que la magnitud representa la respuesta del sistema a diferentes frecuencias, mientras que la fase indica el desfase entre la entrada y la salida.
 
@@ -78,7 +78,7 @@ La representación de la magnitud y la fase se puede realizar en coordenadas pol
 Estas representaciones gráficas son útiles para observar y entender el comportamiento dinámico del sistema, facilitando el diseño y ajuste de controladores
 Los diagramas de Bode son herramientas gráficas utilizadas para representar la respuesta en frecuencia de sistemas lineales. En ellos, se utiliza la escala en decibelios (dB) para expresar la ganancia y la fase de la función de transferencia.
 
-### Decibelios (dB)
+### 3.1.Decibelios (dB)
 
 - *Definición*: Los decibelios no son una unidad física, sino una forma de interpolación para expresar cantidades como ganancia o potencia.
 - *Fórmula para la Ganancia*: La ganancia en decibelios se calcula con la fórmula:
@@ -89,7 +89,7 @@ A_{dB} = 20 \log_{10}(A)
 
 donde $$\( A \)$$ es la ganancia lineal del sistema. Esta expresión indica que una ganancia de $$\( A = 1 \) (0 dB)$$ significa que no hay amplificación, mientras que ganancias mayores o menores se reflejan en valores positivos o negativos en dB.
 
-### Diagramas de Bode
+### 3.2.Diagramas de Bode
 
 Los diagramas de Bode consisten en dos gráficas:
 1. *Diagrama de Magnitud*: Representa la ganancia en dB frente a la frecuencia (en una escala logarítmica).
@@ -97,12 +97,12 @@ Los diagramas de Bode consisten en dos gráficas:
 
 Estos diagramas permiten visualizar cómo responde un sistema a diferentes frecuencias, facilitando el análisis y diseño de sistemas de control.
 
-### Diagramas polar
+### 3.3.Diagramas polar
 
 El diagrama polar es una representación gráfica que muestra la relación entre la magnitud y la fase de una función de transferencia en el dominio de la frecuencia. Este tipo de diagrama es especialmente útil para analizar sistemas lineales, ya que permite visualizar cómo responden ante diferentes frecuencias.
 
-## Efecto de parámetros dinámicos
-### Análisis Frecuencial en Tiempo Discreto
+## 4.Efecto de parámetros dinámicos
+### 4.1.Análisis Frecuencial en Tiempo Discreto
 
 El análisis en frecuencia en sistemas de tiempo discreto no se puede realizar de manera directa como en el caso de los sistemas continuos. Sin embargo, se puede utilizar la transformación bilineal (también conocida como transformación de Tustin) para aproximar el análisis de frecuencia en tiempo discreto a uno en tiempo continuo.
 
@@ -118,7 +118,7 @@ $$\[
 z = \frac{1 + \frac{wT}{2}}{1 - \frac{wT}{2}}
 \]$$
 
-#### Sustitución para Frecuencia
+#### 4.2.Sustitución para Frecuencia
 
 Al sustituir $$\( z \)$$ por $$\( e^{j\omega T} \)$$, obtenemos:
 
@@ -135,7 +135,7 @@ v = \frac{2\omega T}{2} \tan\left(\frac{\omega T}{2}\right)
 
 💡 Ejemplo
 
-### Ejemplo de Análisis Frecuencial
+### 4.3.Ejemplo de Análisis Frecuencial
 
 1. *Dominio Continuo:*
 
@@ -162,7 +162,7 @@ v = \frac{2\omega T}{2} \tan\left(\frac{\omega T}{2}\right)
    En esta función, $$\( w \)$$ es la variable de frecuencia que se relaciona con $$\( z \)$$ y $$\( s \)$$ a través de las transformaciones adecuadas.
 aparece un cero que no tenia; la ganancia y el polo estan ubicados aproximadamente igual al sistema continuo
 
-### Respuesta Temporal vs. Respuesta en Frecuencia
+### 4.4.Respuesta Temporal vs. Respuesta en Frecuencia
 
 La respuesta temporal y la respuesta en frecuencia son dos enfoques complementarios para analizar el comportamiento de sistemas en control, especialmente en sistemas en lazo cerrado.
 
@@ -188,7 +188,7 @@ donde:
 
 
 
-# Ejercicios
+# 5.Ejercicios
 
 📚 Ejercicio 1:
 
@@ -264,6 +264,8 @@ La magnitud es $$\( |G(j5)| = 0.02 \) y la fase es \( -90^\circ \)$$.
 
 
 
-## Conclusiones
+## 6.Conclusiones
 
 El análisis de sistemas de control integra la respuesta temporal y en frecuencia, donde el overshoot y el coeficiente de amortiguamiento son cruciales para evaluar la estabilidad. Herramientas como la transformación bilineal y los diagramas de Bode permiten visualizar y diseñar sistemas de manera efectiva. Comprender estas relaciones es esencial para asegurar un rendimiento óptimo y estable en aplicaciones de control.
+
+## 7.Referencias
