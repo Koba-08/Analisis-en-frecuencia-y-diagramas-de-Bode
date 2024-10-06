@@ -178,10 +178,12 @@ donde:
 - $$\( \zeta \)$$ es el coeficiente de amortiguamiento.
 
 
-1. *Cálculo del Coeficiente de Amortiguamiento $$(\( \zeta \))$$*:
+1. Cálculo del Coeficiente de Amortiguamiento:
+   
    $$\zeta = \sqrt{\frac{\ln{Mp}^{2}}{\pi ^{2}+\ln{Mp}^{2}}}$$
 
-2. *Cálculo del Pico Resonante $$(\( M_r \))$$*:
+2. Cálculo del Pico Resonante:
+   
    $$Mr= \frac{1}{2\sqrt{\frac{\ln{Mp}^{2}}{\pi ^{2}+\ln{Mp}^{2}}}\sqrt{1-\frac{\ln{Mp}^{2}}{\pi ^{2}+\ln{Mp}^{2}}}}$$
 
 
