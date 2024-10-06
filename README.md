@@ -271,3 +271,5 @@ La magnitud es $$\( |G(j5)| = 0.02 \) y la fase es \( -90^\circ \)$$.
 El análisis de sistemas de control integra la respuesta temporal y en frecuencia, donde el overshoot y el coeficiente de amortiguamiento son cruciales para evaluar la estabilidad. Herramientas como la transformación bilineal y los diagramas de Bode permiten visualizar y diseñar sistemas de manera efectiva. Comprender estas relaciones es esencial para asegurar un rendimiento óptimo y estable en aplicaciones de control.
 
 ## 7.Referencias
+
+1. Tomado de: https://www.rohde-schwarz.com/lat/productos/prueba-y-medicion/essentials-test-equipment/digital-oscilloscopes/entendiendo-los-diagramas-de-bode_254514.html
